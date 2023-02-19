@@ -10,9 +10,17 @@ class Author
     def articles
         Article.all.filter do |article|
         article.author == self 
+        end
     end
-    
-end 
 
+    def magazines
+        articles.map do |article|
+            article.magazine.
+        end.uniq
+        end
+        
+    end 
+end 
+    
 # author=Author.new('mike')
 # puts author.name
