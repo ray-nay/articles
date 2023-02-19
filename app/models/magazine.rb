@@ -28,5 +28,9 @@ class Magazine
       def article_titles
             self.articles.map { |article| article.title }
           end
+          
+          def contributing_authors
+            self.articles.group_by { |article| article.author }.select { |author, articles| articles.length > 2 }.keys
+          end
       end
 end 
