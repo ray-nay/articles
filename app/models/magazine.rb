@@ -15,5 +15,10 @@ class Magazine
         @@all << self
     end 
 
-   
+    def contributors
+            Article.all.filter do |m|
+                m.magazine == self
+            end.map do |mag| mag.author 
+        end 
+    end
 end 
