@@ -21,4 +21,7 @@ class Magazine
             end.map do |mag| mag.author 
         end 
     end
+    def self.find_by_name(name)
+        self.all.find { |magazine| magazine.name == name }
+      end
 end 
