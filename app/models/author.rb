@@ -27,6 +27,7 @@ class Author
     def topic_areas
         magazines.map do |magaz|
             magaz.category
+            end 
         end 
 end 
     
