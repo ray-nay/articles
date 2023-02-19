@@ -8,9 +8,11 @@ class Author
     end 
 
     def articles
-        Article.all.select { |article| article.author == self }
-      end
+        Article.all.filter do |article|
+        article.author == self 
+    end
+    
 end 
 
-author=Author.new('mike')
-puts author.name
+# author=Author.new('mike')
+# puts author.name
