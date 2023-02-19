@@ -1,9 +1,9 @@
 require_relative 'article'
 
 class Author 
-    attr_accessor :name
+    attr_accessor :name, :magazine, :article
 
-    def initialize (name)
+    def initialize(name)
         @name = name
     end 
 
