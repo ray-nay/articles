@@ -20,7 +20,10 @@ class Author
         end
         
     end 
+    def add_article(magazine:, title:)
+        Article.new(magazine, title)   
+        
+
+    end
 end 
     
-# author=Author.new('mike')
-# puts author.name
