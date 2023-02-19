@@ -22,8 +22,11 @@ class Author
     end 
     def add_article(magazine:, title:)
         Article.new(magazine, title)   
-        
-
     end
+
+    def topic_areas
+        magazines.map do |magaz|
+            magaz.category
+        end 
 end 
     
