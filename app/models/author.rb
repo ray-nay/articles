@@ -1,4 +1,4 @@
-require_relative 'author.rb'
+require_relative 'article'
 
 class Author 
     attr_accessor :name
@@ -12,4 +12,5 @@ class Author
       end
 end 
 
-
+author=Author.new('mike')
+puts author.name
